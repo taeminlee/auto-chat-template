@@ -1,5 +1,5 @@
 import fire
-from auto_chat_template.chat_tokenizer import ChatTokenizer
+from auto_chat_template.auto_chat_tokenizer import AutoChatTokenizer
 
 
 class AutoChatTemplate:
@@ -14,7 +14,7 @@ class AutoChatTemplate:
                template=None,
                *args,
                **kwargs):
-        chat_tokenizer = ChatTokenizer(pretrained_model_name_or_path=pretrained_model_name_or_path, template=template)
+        chat_tokenizer = AutoChatTokenizer(pretrained_model_name_or_path=pretrained_model_name_or_path, template=template)
         print(chat_tokenizer.prompt(text, tokenize=tokenize, add_generation_prompt=add_generation_prompt, *args, **kwargs))
 
     def chat(self, 
@@ -25,7 +25,7 @@ class AutoChatTemplate:
                template=None,
                *args,
                **kwargs):
-        chat_tokenizer = ChatTokenizer(pretrained_model_name_or_path=pretrained_model_name_or_path, template=template)
+        chat_tokenizer = AutoChatTokenizer(pretrained_model_name_or_path=pretrained_model_name_or_path, template=template)
         print(chat_tokenizer.chat(messages, tokenize=tokenize, add_generation_prompt=add_generation_prompt, *args, **kwargs))
 
 

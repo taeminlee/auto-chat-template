@@ -1,7 +1,7 @@
 from transformers import AutoTokenizer
 
 
-class ChatTokenizer():
+class AutoChatTokenizer():
     def __init__(self, 
                  pretrained_model_name_or_path, 
                  template=None,
